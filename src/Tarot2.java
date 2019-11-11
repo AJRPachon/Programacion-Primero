@@ -1,33 +1,64 @@
 /*
-    Leer año
-    Calcular si es bisiesto o no
-        //Si es bisiesto, bisiesto = true
 
-    Leer mes
-    Validar rango entre 1 y 12
+    ANÁLISIS:
+         Realizar un programa que lea una fecha de nacimiento de la forma día, mes, año, y dé como resultado
+         el número de Tarot. El programa verificará si la fecha es correcta.
 
-    Leer dia
-    Validar dia segun mes:
-        Segun (mes):
-            caso 1,3,5,7,8,10,12
-                Escribir("El dia tiene que estar entre 1 y 31")
-                Leer dia
-                Validar dia
+    ENTRADA:
+        int anio, mes , numeroTarot , dia, numeroSuma , acumulaTarot
+        boolean bisiesto = false;
+        char respuesta = ' ';
 
-            caso 4,6,9,11
-                Escribir("El dia tiene que estar entre 1 y 30")
+    SALIDA:
+        Numero del tarot
 
-            caso 2
-                Si ( bisiesto == true )
-                    Escribir ("El dia tiene que estar entre 1 y 29")
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    PSEUDOCÓDIGO:
+    ProgramaPrincipal
+    Inicio
+
+        ¿Mensaje?
+
+        HACER
+
+            Leer año
+            Calcular si es bisiesto o no
+                //Si es bisiesto, bisiesto = true
+
+            Leer mes
+            Validar rango entre 1 y 12
+
+            Leer dia
+            Validar dia segun mes:
+            Segun (mes):
+                caso 1,3,5,7,8,10,12
+                    Escribir("El dia tiene que estar entre 1 y 31")
                     Leer dia
                     Validar dia
 
-                Sino
-                    Escribir("El dia tiene que estar entre 1 y 28")
-                    Leer dia
-                    Validar dia
-           FinSegun
+                caso 4,6,9,11
+                    Escribir("El dia tiene que estar entre 1 y 30")
+
+                caso 2
+                    Si ( bisiesto == true )
+                        Escribir ("El dia tiene que estar entre 1 y 29")
+                        Leer dia
+                        Validar dia
+
+                    Sino
+                        Escribir("El dia tiene que estar entre 1 y 28")
+                        Leer dia
+                        Validar dia
+             FinSegun
+
+             Calcular Numero tarot
+             Mostrar numero tarot
+
+             LeerYValidar ejecutar programa
+
+        MIENTRAS ( respuesta != 'X' )
+    Fin
  */
 
 import java.util.Scanner;
@@ -168,7 +199,7 @@ public class Tarot2 {
 
         }while ( respuesta != 'X' );  //Fin ejecutar de nuevo
 
-        System.out.println("Vuelva pronto");
+        System.out.println("Vuelva pronto, viva er Beti");
 
     }
 }

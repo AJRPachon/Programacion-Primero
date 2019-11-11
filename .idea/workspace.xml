@@ -23,6 +23,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ajramirez\Documents\GitHub\Programacion-Primero\src" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -45,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573473232103</updated>
-      <workItem from="1573473242865" duration="618000" />
+      <workItem from="1573473242865" duration="2473000" />
     </task>
     <servers />
   </component>
