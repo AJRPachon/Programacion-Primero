@@ -1,6 +1,6 @@
 /*
 
-    ANÁLISIS:
+    ANALISIS:
          Realizar un programa que lea una fecha de nacimiento de la forma día, mes, año, y dé como resultado
          el número de Tarot. El programa verificará si la fecha es correcta.
 
@@ -18,7 +18,7 @@
     ProgramaPrincipal
     Inicio
 
-        ¿Mensaje?
+        Mensaje de bienvenida
 
         HACER
 
@@ -34,30 +34,35 @@
             Segun (mes):
                 caso 1,3,5,7,8,10,12
                     Escribir("El dia tiene que estar entre 1 y 31")
-                    Leer dia
-                    Validar dia
+                    Leer dia y Validar dia
 
                 caso 4,6,9,11
                     Escribir("El dia tiene que estar entre 1 y 30")
+                    Leer dia y Validar dia
 
                 caso 2
                     Si ( bisiesto == true )
                         Escribir ("El dia tiene que estar entre 1 y 29")
-                        Leer dia
-                        Validar dia
+                        Leer dia y Validar dia
 
                     Sino
                         Escribir("El dia tiene que estar entre 1 y 28")
-                        Leer dia
-                        Validar dia
+                        Leer dia y Validar dia
              FinSegun
 
              Calcular Numero tarot
+                //numeroTarot = numeroSuma % 10;
+                //numeroSuma = numeroSuma / 10;
+                //acumulaTarot += numeroTarot;
+
              Mostrar numero tarot
 
-             LeerYValidar ejecutar programa
+             Leer Y Validar ejecutar programa
 
         MIENTRAS ( respuesta != 'X' )
+
+        mensaje cierre del programa
+
     Fin
  */
 
@@ -70,18 +75,26 @@ public class Tarot2 {
 
         //VARIABLES BISIESTO
         int anio = 0;
-        boolean bisiesto = false;
+        boolean bisiesto;
 
         //VARIABLES TAROT
-        int mes = 0, numeroTarot = 0, dia = 0, numeroSuma = 0, acumulaTarot = 0;
+        int mes = 0, numeroTarot = 0, dia = 0, numeroSuma = 0, acumulaTarot;
         char respuesta = ' ';
+
+        //Mensaje de bienvenida
+        System.out.println("************************ Bienvenido a nuestro Tarot Magic Plus Ultra HD 4.231 ***************************");
+        System.out.println("******* Sólo tiene que introducir su año, mes y dia de nacimiento para saber su número del Tarot ********");
+        System.out.println("********************************************** COMENCEMOS ***********************************************");
 
         //Ejecutar el programa de nuevo
         do {
 //////////////////////////////////////////CALCULAR AÑO BISIESTO////////////////////////////////////////////////////////////////////////////////////////
-
+			//Debe estar aqui para que no sea siempre true y se actualice en cada iteracion
+			bisiesto = false;
+			acumulaTarot = 0;
+		
             //OBTENER Y VALIDAR AÑO
-            System.out.println("Introduzca su año de nacimiento");
+            System.out.println("\nIntroduzca su año de nacimiento (formato YYYY)");
             anio = teclado.nextInt();
 
             while (anio < 1582){
@@ -91,30 +104,30 @@ public class Tarot2 {
             }
 
             //Calcular Anio Bisiesto
-            if ((anio % 4 == 0) && (anio % 400 == 0 || anio / 100 != 0)) {
+            if (((anio % 4 == 0) && (anio % 100 != 0)) || (anio % 400 == 0)) {
                 bisiesto = true;
             }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             //LEER Y VALIDAR MES
-            System.out.println("Introduzca su mes de nacimiento");
+            System.out.println("Introduzca su mes de nacimiento (formato MM)");
             mes = teclado.nextInt();
 
             while (mes < 1 || mes > 12) {
-                System.out.println("Por favor, introduzca un mes entre 1 y 12");
+                System.out.println("Por favor, introduzca un mes entre 1 y 12, de momento no calculamos numeros del Tarot extraterrestres");
                 mes = teclado.nextInt();
             }
 
 
             //LEER Y VALIDAR DIA
-            System.out.println("Introduzca su día de nacimiento");
+            System.out.println("Introduzca su día de nacimiento (formato DD)");
             dia = teclado.nextInt();
 
             //validar dia segun mes
             switch (mes) {
                 //Para cuando el dia acaba en 31
-                case 1:case 3: case 5: case 7: case 8: case 10: case 12:
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                     if (dia < 1 || dia > 31) {
                         System.out.println("El dia tiene que estar entre 1 y 31. Por favor, introduzca un dia entre 1 y 31");
                         dia = teclado.nextInt();
@@ -146,21 +159,21 @@ public class Tarot2 {
                 //CUANDO ANIO ES BISIESTO O NO
                 case 2:
                     if (bisiesto) {
-                        System.out.println("El dia tiene que estar entre 1 y 28. Por favor, introduzca un dia entre 1 y 28");
-                        dia = teclado.nextInt();
-
-                        //Validar dia
-                        while (dia < 1 || dia > 28) {
-                            System.out.println(dia + " no es un dia valido. Por favor, introduzca un dia entre 1 y 28");
-                            dia = teclado.nextInt();
-                        }
-                    } else {
                         System.out.println("El dia tiene que estar entre 1 y 29. Por favor, introduzca un dia entre 1 y 29");
                         dia = teclado.nextInt();
 
                         //Validar dia
                         while (dia < 1 || dia > 29) {
                             System.out.println(dia + " no es un dia valido. Por favor, introduzca un dia entre 1 y 29");
+                            dia = teclado.nextInt();
+                        }
+                    } else {
+                        System.out.println("El dia tiene que estar entre 1 y 28. Por favor, introduzca un dia entre 1 y 28");
+                        dia = teclado.nextInt();
+
+                        //Validar dia
+                        while (dia < 1 || dia > 28) {
+                            System.out.println(dia + " no es un dia valido. Por favor, introduzca un dia entre 1 y 28");
                             dia = teclado.nextInt();
                         }
                     }
@@ -186,20 +199,20 @@ public class Tarot2 {
 
 /////////////////////////////////////////////EJECUTAR DE NUEVO EL PROGRAMA////////////////////////////////////////////////////////////////////////////////
 
-            System.out.println("[S] Ejecutar de nuevo el programa \n [X] Salir del programa");
+            System.out.println("[S] Ejecutar de nuevo el programa \n[X] Salir del programa");
             respuesta = teclado.next().charAt(0);
             respuesta = Character.toUpperCase(respuesta);
 
             //validar salir o ejecutar programa de nuevo
             while ( respuesta !='S' && respuesta !='X' ){
-                System.out.println("Por favor, introduzca una de las respuestas: \n [S] Ejecutar de nuevo el programa \n [X] Salir del programa");
+                System.out.println("Por favor, introduzca una de las respuestas:\n[S] Ejecutar de nuevo el programa \n[X] Salir del programa");
                 respuesta = teclado.next().charAt(0);
                 respuesta = Character.toUpperCase(respuesta);
             }
 
         }while ( respuesta != 'X' );  //Fin ejecutar de nuevo
 
-        System.out.println("Vuelva pronto, viva er Beti");
+        System.out.println("\nVuelva pronto, viva er Beti");
 
     }
 }

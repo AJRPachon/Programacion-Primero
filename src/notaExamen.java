@@ -53,10 +53,10 @@ public class notaExamen {
 
         //Mensaje de Bienvenida
         System.out.println("************************** SUSPENDEITOR 4.2 *****************************");
-        System.out.println("*************** Bienvenido a la nueva actualización 4.2 *****************");
-        System.out.println("*********** Ahora podrá calcular la nota media al instante **************");
-        System.out.println("***** Para acabar de introducir notas, introduzca una nota negativa *****");
-        System.out.println("************** PD: Recuerde que el sotano no es una opción **************");
+        System.out.println("*************** Bienvenide a le nueve actualización 4.2 *****************");
+        System.out.println("*********** Ahore podrá calcular le note medie al instante **************");
+        System.out.println("***** Para acabar de introducir notes, introduzque une note negative *****");
+        System.out.println("************** PD: Recuerde que el sotane no es une opción **************");
 
         do {
 
@@ -69,7 +69,7 @@ public class notaExamen {
 
                 //validar nota que sea entre 0 y 10
                 while (nota > 10) {
-                    System.out.println("Por favor, introduzca una note entre 0 y 10");
+                    System.out.println("Por favor, introduzque une note entre 0 y 10");
                     nota = teclado.nextDouble();
                 }
 
@@ -96,20 +96,20 @@ public class notaExamen {
 
 
             //Mostrar resultados
-            System.out.println("La note mes alte ha sido un: " + notaAlta);
-            System.out.println("La note mes baje ha sido un: " + notaBaja);
-            System.out.println("La note medie es de: " + notaMedia);
-            System.out.println("La cantidad de alumnes presentades al examen ha sido de: " + cont + " alumne/s");
+            System.out.println("Le note mes alte ha sido un: " + notaAlta);
+            System.out.println("Le note mes baje ha sido un: " + notaBaja);
+            System.out.println("Le note medie es de: " + notaMedia);
+            System.out.println("Le cantided de alumnes presentades al examen ha sido de: " + cont + " alumne/s");
 
             //Preguntar Ejecutar De Nuevo
-            System.out.println("\nDesea ejecutar de nuevo el programe:\n[S] Ejecutar de nuevo\n[X] Salir del programe\n");
+            System.out.println("\nDesea ejecutar de nuevo el programe:\n[S] Ejecutar de nueve\n[X] Salir del programe\n");
             respuesta = teclado.next().charAt(0);
             respuesta = Character.toUpperCase(respuesta);
 
 
             //Validar respuesta
             while ( respuesta != 'X' && respuesta != 'S' ){
-                System.out.println("Por favor, introduzque una de las opciones a elegir:\n[S] Ejecutar de nuevo\n[X] Salir del programe\n");
+                System.out.println("Por favor, introduzque une de les opciones a elegir:\n[S] Ejecuter de nueve\n[X] Salir del programe\n");
                 respuesta = teclado.next().charAt(0);
                 respuesta = Character.toUpperCase(respuesta);
             }
