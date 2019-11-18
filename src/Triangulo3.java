@@ -32,7 +32,7 @@ public class Triangulo3 {
         Scanner teclado = new Scanner (System.in);
 
         int numeroDeFilas = 0, cont, numero1 = 0, numero2 = 0;
-        char caracter = ' '; 
+        char caracter = ' ';
 
         System.out.println("Introduzca un numero de filas");
         numeroDeFilas = teclado.nextInt();
@@ -56,8 +56,7 @@ public class Triangulo3 {
             //Actualiza el numero2 para que en la siguiente iteración vaya sumando las filas
             numero2++;
             System.out.println("");
+            
         }
-
-
     }
 }
