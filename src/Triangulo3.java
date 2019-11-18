@@ -34,6 +34,35 @@ public class Triangulo3 {
         int numeroDeFilas = 0, cont, numero1 = 0, numero2 = 0;
         char caracter = ' ';
 
+
+//////////////////////////////////////////////////////////TRIANGULO//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        System.out.println("Introduzca un numero de filas");
+        numeroDeFilas = teclado.nextInt();
+
+        //Para elegir el carácter que queremos imprimir;
+        System.out.println("Introduzca el caracter que desea imprimir");
+        caracter = teclado.next().charAt(0);
+
+        //Para saber el número de filas que tenemos que pintar
+        for ( cont = 0; cont < numeroDeFilas; cont++){
+
+            //Hay que inicializar la variable a 0 para que en cada iteracion no se guarde el valor anterior cuando entramos en el bucle while
+            numero1 = 0;
+
+            //Pinta cada una de las filas individualmente
+            while (numero1 < numero2) {
+                System.out.print(caracter);
+                numero1++;
+            }
+
+            //Actualiza el numero2 para que en la siguiente iteración vaya sumando las filas
+            numero2++;
+            System.out.println("");
+        }
+/////////////////////////////////////////////////////////CUADRADO//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
         System.out.println("Introduzca un numero de filas");
         numeroDeFilas = teclado.nextInt();
 
@@ -49,7 +78,34 @@ public class Triangulo3 {
 
             //Pinta cada una de las filas individualmente
             while (numero1 < numeroDeFilas) {
-                System.out.print(caracter);
+                System.out.print(caracter+"  ");
+                numero1++;
+            }
+
+            //Actualiza el numero2 para que en la siguiente iteración vaya sumando las filas
+            numero2++;
+            System.out.println("");
+
+        }
+
+
+////////////////////////////////////////////////////////////////RECTANGULO///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        int filas = 0, columnas = 0;
+
+        System.out.println("filas");
+        filas = teclado.nextInt();
+
+        System.out.println("Columnas");
+        columnas = teclado.nextInt();
+
+        for ( cont = 0; cont < filas; cont++){
+
+            //Hay que inicializar la variable a 0 para que en cada iteracion no se guarde el valor anterior cuando entramos en el bucle while
+            numero1 = 0;
+
+            //Pinta cada una de las filas individualmente
+            while (numero1 < columnas) {
+                System.out.print("*  ");
                 numero1++;
             }
 
