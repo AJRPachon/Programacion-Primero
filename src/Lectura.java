@@ -21,7 +21,7 @@ Inicio
         HACER
             LeerYValidar Caracter
 
-            Si ( Caracter != .,;:-¿?¡! )
+            Si ( Caracter == .,;:-¿?¡! )
                 contSignosPuntuacion++
                 SiNo
                     contCaracteres++
