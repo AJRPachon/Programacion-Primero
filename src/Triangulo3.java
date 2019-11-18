@@ -3,6 +3,9 @@
 
 6.- Modifica el programa anterior para que nos permita elegir el carácter con el que se rellena el triángulo.
 
+7.- Modifica el programa anterior para poder elegir entre pintar una triángulo, un cuadrado o un rectángulo.
+    En el tercer caso, además del número de columnas habrá que leer el número de filas.
+
 ENTRADA:
     Numero de filas que desea que tenga el triangulo
 
@@ -19,18 +22,17 @@ Inicio
 Fin
 
 
-
  */
 
 import java.util.Scanner;
 
-public class Triangulo2 {
+public class Triangulo3 {
     public static void main ( String[] args ){
 
         Scanner teclado = new Scanner (System.in);
 
         int numeroDeFilas = 0, cont, numero1 = 0, numero2 = 0;
-        char caracter = ' ';
+        char caracter = ' '; 
 
         System.out.println("Introduzca un numero de filas");
         numeroDeFilas = teclado.nextInt();
