@@ -46,7 +46,7 @@ public class Triangulo2 {
             numero1 = 0;
 
             //Pinta cada una de las filas individualmente
-            while (numero1 <= numero2) {
+            while (numero1 < numero2) {
                 System.out.print(caracter);
                 numero1++;
             }
