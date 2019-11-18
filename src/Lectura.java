@@ -21,7 +21,7 @@ Inicio
         HACER
             LeerYValidar Caracter
 
-            Si ( Caracter == .,;:-¿?¡! )
+            Si ( Caracter != .,;:-¿?¡! )
                 contSignosPuntuacion++
                 SiNo
                     contCaracteres++
@@ -43,13 +43,13 @@ Inicio
         MIENTRAS ( Caracter != '*' )
 
         //CalcularTotal de veces
-        totalVecesCaracteres = contadorTotal - contCaracteres
-        totalVecesSignosPuntuacion = contadorTotal - contSignosPuntuacion
+        totalVecesCaracteres = contadorTotal - contSignosPuntuacion
+        totalVecesSignosPuntuacion = contSignosPuntuacion
 
 
-       //CalcularPorcentaje
-       porcentajeCaracteres = totalVecesCaracteres / contadorTotal * 100
-       porcentajeSignosPuntuacion = contSignosPuntuacion / contadorTotal * 100
+        //CalcularPorcentaje
+        porcentajeCaracteres = ( contadorTotal / totalVecesCaracteres ) * 100
+        porcentajeSignosPuntuacion = ( contadorTotal / totalVecesSignosPuntuacion ) * 100
 
 
        MOSTRAR RESULTADOS
@@ -71,7 +71,7 @@ public class Lectura {
         Scanner teclado = new Scanner (System.in);
 
         char caracter =' ', respuesta = ' ';
-        int contMayusculas, contSignosPuntuacion ,contCaracterAcumulado, totalVecesCaracteres, totalVecesSignosPuntuacion,
+        double contMayusculas, contSignosPuntuacion ,contCaracterAcumulado, totalVecesCaracteres, totalVecesSignosPuntuacion,
                 porcentajeCaracteres, porcentajeSignosPuntuacion, contCaracteres, caracterAcumulado, contadorTotal;
 
         //Programa principal cuando se pide repetir
@@ -111,31 +111,34 @@ public class Lectura {
                 caracterAcumulado = caracter;
 
                 //Para contar las veces que se ejecuta el bucle y luego hacer operaciones
-                contadorTotal++;
+                if (caracter != '*') {
+                    contadorTotal++;
+                }
 
             }while( caracter != '*');
 
             //CalcularTotal de veces
-            totalVecesCaracteres = contadorTotal - contCaracteres;
-            totalVecesSignosPuntuacion = (contadorTotal -1) - contSignosPuntuacion;
+            totalVecesCaracteres = contadorTotal - contSignosPuntuacion;
+            totalVecesSignosPuntuacion = contSignosPuntuacion;
 
 
             //CalcularPorcentaje
-            porcentajeCaracteres = totalVecesCaracteres / contadorTotal * 100;
-            porcentajeSignosPuntuacion = contSignosPuntuacion / contadorTotal * 100;
+            porcentajeCaracteres = ( totalVecesCaracteres / contadorTotal ) * 100;
+            porcentajeSignosPuntuacion = ( totalVecesSignosPuntuacion / contadorTotal ) * 100;
 
 
             //MOSTRAR RESULTADOS0
-            System.out.println("mayusculas: "+contMayusculas);
-            System.out.println("Contador de signos de puntuación: "+contSignosPuntuacion);
-            System.out.println("Total veces caracteres iguales consecutivos: "+totalVecesCaracteres);
-            System.out.println("Total veces signos de puntuacion: "+totalVecesSignosPuntuacion);
+            System.out.println("\nmayusculas: "+(int)contMayusculas);
+            System.out.println("Contador de signos de puntuación: "+(int)contSignosPuntuacion);
+            System.out.println("Total veces caracteres iguales consecutivos: "+(int)contCaracterAcumulado);
+            System.out.println("Total veces signos de puntuacion: "+(int)totalVecesSignosPuntuacion);
             System.out.println("Porcentaje caracteres: " +porcentajeCaracteres);
             System.out.println("Porcentaje Signos de Puntuación: "+porcentajeSignosPuntuacion);
-            System.out.println("Contador de caracteres: "+contCaracteres);
+            System.out.println("Contador de caracteres: "+(int)(contCaracteres -1));
+            System.out.println("contador total: "+(int)contadorTotal);
 
             //PREGUNTAR EJECUTAR DE NUEVO
-            System.out.println("Ejecutar de nuevo ");
+            System.out.println("\nEjecutar de nuevo ");
             respuesta = teclado.next().charAt(0);
             respuesta = Character.toUpperCase(respuesta);
 
