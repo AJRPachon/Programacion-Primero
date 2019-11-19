@@ -56,6 +56,5 @@ public class Triangulo2 {
             System.out.println("");
         }
 
-
     }
 }
