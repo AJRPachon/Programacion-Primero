@@ -31,9 +31,21 @@ public class Triangulo3 {
 
         Scanner teclado = new Scanner (System.in);
 
-        int numeroDeFilas = 0, cont, numero1 = 0, numero2 = 0;
-        char caracter = ' ';
+        int numeroDeFilas = 0, cont, numero1 = 0, numero2 = 0, opcionInicio = 0;
+        char caracter = ' ', respuesta = ' ';
 
+        do{
+            //Mostrar elegir opcion (triangulo, cuadrado, rectangulo )
+
+            //Segun (opcionInicio)
+                //case 1: triangulo
+                //case 2: cuadrado
+                //case 3: rectangulo
+            //FinSegun
+
+            //Ejecutar de nuevo (S/N)
+
+        }while ( respuesta != 'N'  );
 
 //////////////////////////////////////////////////////////TRIANGULO//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
