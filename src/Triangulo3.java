@@ -45,7 +45,7 @@ public class Triangulo3 {
 
         Scanner teclado = new Scanner (System.in);
 
-        int numeroDeFilas = 0, cont, numero1 = 0, numero2, opcionInicio = 0,altura, ancho, cont2;
+        int numeroDeFilas = 0, cont, cont2, opcionInicio = 0, altura, ancho;
         char caracter = ' ', respuesta = ' ';
 
         do{
@@ -72,12 +72,10 @@ public class Triangulo3 {
                             System.out.println("Por favor, introduzca un número mayor que 0");
                             numeroDeFilas = teclado.nextInt();
                         }
-
-                    //Para elegir el carácter que queremos imprimir;
                     System.out.println("Introduzca el caracter que desea imprimir");
                     caracter = teclado.next().charAt(0);
 
-                    numero2 = 0; //Para cuando ejecutemos de nuevo se restablezca a 0
+                    //Para elegir el carácter que queremos imprimir;
 
                     //Para saber el número de filas que tenemos que pintar
                     for ( cont = 0; cont <= numeroDeFilas; cont++){
@@ -114,7 +112,7 @@ public class Triangulo3 {
                 //case 3: rectangulo
                 case 3:
                     altura = 0; ancho = 0;
-
+ 
                     System.out.println("Introduzca la altura del rectangulo");
                     altura = teclado.nextInt();
 
