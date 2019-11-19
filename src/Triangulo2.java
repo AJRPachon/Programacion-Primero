@@ -40,7 +40,7 @@ public class Triangulo2 {
         caracter = teclado.next().charAt(0);
 
         //Para saber el número de filas que tenemos que pintar
-        for ( cont = 0; cont < numeroDeFilas; cont++){
+        for ( cont = 0; cont <= numeroDeFilas; cont++){
 
             //Hay que inicializar la variable a 0 para que en cada iteracion no se guarde el valor anterior cuando entramos en el bucle while
             numero1 = 0;

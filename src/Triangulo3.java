@@ -36,6 +36,7 @@ public class Triangulo3 {
 
         do{
             //Mostrar elegir opcion (triangulo, cuadrado, rectangulo )
+            System.out.println("");
 
             //Segun (opcionInicio)
                 //case 1: triangulo
@@ -57,7 +58,7 @@ public class Triangulo3 {
         caracter = teclado.next().charAt(0);
 
         //Para saber el número de filas que tenemos que pintar
-        for ( cont = 0; cont < numeroDeFilas; cont++){
+        for ( cont = 0; cont <= numeroDeFilas; cont++){
 
             //Hay que inicializar la variable a 0 para que en cada iteracion no se guarde el valor anterior cuando entramos en el bucle while
             numero1 = 0;
@@ -83,7 +84,7 @@ public class Triangulo3 {
         caracter = teclado.next().charAt(0);
 
         //Para saber el número de filas que tenemos que pintar
-        for ( cont = 0; cont < numeroDeFilas; cont++){
+        for ( cont = 0; cont <= numeroDeFilas; cont++){
 
             //Hay que inicializar la variable a 0 para que en cada iteracion no se guarde el valor anterior cuando entramos en el bucle while
             numero1 = 0;
@@ -110,7 +111,7 @@ public class Triangulo3 {
         System.out.println("Columnas");
         columnas = teclado.nextInt();
 
-        for ( cont = 0; cont < filas; cont++){
+        for ( cont = 0; cont <= filas; cont++){
 
             //Hay que inicializar la variable a 0 para que en cada iteracion no se guarde el valor anterior cuando entramos en el bucle while
             numero1 = 0;
