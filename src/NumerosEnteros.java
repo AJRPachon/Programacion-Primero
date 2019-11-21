@@ -112,8 +112,8 @@ public class NumerosEnteros {
                 }
             }
 
-            System.out.println("Divisores primer número: " + acumula1);
-            System.out.println("Divisores segundo número: " + acumula2);
+            System.out.println("Divisores primer número: " + acumula2);
+            System.out.println("Divisores segundo número: " + acumula1);
             System.out.println("Divisores comunes: " + comunes);
 
             //Preguntar ejecutar de nuevo
