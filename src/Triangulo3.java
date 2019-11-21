@@ -9,7 +9,8 @@
 ENTRADAS:
     Numero de filas que desea que tenga el triangulo
     Numero de longitud del cuadrado
-    Numero de filas y columnas del rectangulo
+    Numero de ancho y largo del rectangulo
+    Caracter a pintar
 
 SALIDAS:
     Triangulo cuadrado, rectangulo
