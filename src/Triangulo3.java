@@ -19,19 +19,30 @@ PG
 Programa Principal
 Inicio
 
-    //HACER
+    Mostrar mensaje de Bienvenida
 
-        //Mostrar elegir opcion (triangulo, cuadrado, rectangulo )
+    REPETIR
 
-        //Segun (opcionInicio)
-            //case 1: triangulo
-            //case 2: cuadrado
-            //case 3: rectangulo
-        //FinSegun
+        Mostrar elegir opcion (triangulo, cuadrado, rectangulo )
 
-        //Ejecutar de nuevo (S/N)
+        Segun (opcionInicio)
+            case 1: triangulo
+                Pedir datos y validar
+                Pintar triangulo
 
-    //MIENTRAS ( respuesta != N)
+            case 2: cuadrado
+                Pedir datos y validar
+                Pintar cuadrado
+
+            case 3: rectangulo
+                Pedir datos y validar
+                Pintar rectangulo
+
+        FinSegun
+
+        Ejecutar de nuevo (S/N) Y Validar
+
+    MIENTRAS ( respuesta != N)
 
 Fin
 
@@ -48,14 +59,17 @@ public class Triangulo3 {
         int numeroDeFilas = 0, cont, cont2, opcionInicio = 0, altura, ancho;
         char caracter = ' ', respuesta = ' ';
 
+        //Mensaje de bienvenida
+        System.out.println("Mensaje de Bienvenida en construcción");
+
         do{
             //Mostrar elegir opcion (triangulo, cuadrado, rectangulo )
-            System.out.println("Qué programa desea ejecutar:\n[1] Triangulo\n[2] Cuadrado\n[3] Rectangulo\n");
+            System.out.println("Qué programa desea ejecutar:\n[1] Triangulo\n[2] Cuadrado\n[3] Rectangulo");
             opcionInicio = teclado.nextInt();
 
             //validar opcionInicio
             while ( opcionInicio < 1 || opcionInicio > 3 ){
-                System.out.println("La opción elegida tiene que ser una de las siguientes:\n[1] Triangulo\n[2] Cuadrado\n[3] Rectangulo\n");
+                System.out.println("La opción elegida tiene que ser una de las siguientes:\n[1] Triangulo\n[2] Cuadrado\n[3] Rectangulo");
                 opcionInicio = teclado.nextInt();
             }
 
@@ -64,23 +78,23 @@ public class Triangulo3 {
                 //case 1: triangulo
                 case 1:
 
-                    System.out.println("Introduzca un numero de filas que desea que tenga su triángulo");
+                    System.out.println("Introduzca la altura que desea que tenga su triángulo");
                     numeroDeFilas = teclado.nextInt();
 
                         //validar numero de filas
                         while ( numeroDeFilas <= 0 ){
-                            System.out.println("Por favor, introduzca un número mayor que 0");
+                            System.out.println("Por favor, introduzca un número mayor que 0, una altura no puede ser negativa");
                             numeroDeFilas = teclado.nextInt();
                         }
-                    System.out.println("Introduzca el caracter que desea imprimir");
+
+                    //Para elegir el carácter que queremos imprimir
+                    System.out.println("Introduzca el caracter con el que desea rellenar el triángulo");
                     caracter = teclado.next().charAt(0);
 
-                    //Para elegir el carácter que queremos imprimir;
-
                     //Para saber el número de filas que tenemos que pintar
-                    for ( cont = 0; cont <= numeroDeFilas; cont++){
+                    for ( cont = 0; cont <= numeroDeFilas; cont++){ //Cuenta las filas
 
-                        for ( cont2 = 0; cont2 < cont; cont2++ ){
+                        for ( cont2 = 0; cont2 < cont; cont2++ ){  //Dibuja el ancho de cada fila
                             System.out.print(caracter);
                         }
                         System.out.println("");
@@ -90,17 +104,23 @@ public class Triangulo3 {
                 //case 2: cuadrado
                 case 2:
 
-                    System.out.println("Introduzca un numero de filas");
+                    System.out.println("Introduzca el alto/ancho que desea que tenga su cuadrado");
                     numeroDeFilas = teclado.nextInt();
 
-                    //Para elegir el carácter que queremos imprimir;
-                    System.out.println("Introduzca el caracter que desea imprimir");
+                    //validar que el numero no sea negativo
+                    while ( numeroDeFilas <= 0 ){
+                        System.out.println("Por favor, introduzca un número mayor que 0, una altura/anchura no puede ser negativa");
+                        numeroDeFilas = teclado.nextInt();
+                    }
+
+                    //Para elegir el carácter que queremos imprimir
+                    System.out.println("Introduzca el caracter con el que desea rellenar el cuadrado");
                     caracter = teclado.next().charAt(0);
 
                     //Para saber el número de filas que tenemos que pintar
-                    for ( cont = 0; cont <= numeroDeFilas; cont++){
+                    for ( cont = 0; cont <= numeroDeFilas; cont++){ //Cuenta las filas
 
-                        for ( cont2=0; cont2 < numeroDeFilas; cont2++ ) {
+                        for ( cont2=0; cont2 < numeroDeFilas; cont2++ ) { //Dibuja el ancho de cada fila
                             System.out.print(caracter+"   ");
                         }
 
@@ -112,17 +132,35 @@ public class Triangulo3 {
                 //case 3: rectangulo
                 case 3:
                     altura = 0; ancho = 0;
- 
+
+                    //Pedir altura rectángulo
                     System.out.println("Introduzca la altura del rectangulo");
                     altura = teclado.nextInt();
 
-                    System.out.println("Introduzca el ancho del rectangulo");
+                    //validar que el numero no sea negativo
+                    while ( altura <= 0 ){
+                        System.out.println("Por favor, introduzca un número mayor que 0, una altura/anchura no puede ser negativa");
+                        altura = teclado.nextInt();
+                    }
+
+                    //Pedir anchura rectángulo
+                    System.out.println("Introduzca el ancho del rectángulo");
                     ancho = teclado.nextInt();
 
-                    for ( cont = 0; cont < altura; cont++){
+                    //validar que el numero no sea negativo
+                    while ( ancho <= 0 ){
+                        System.out.println("Por favor, introduzca un número mayor que 0, una altura/anchura no puede ser negativa");
+                        ancho = teclado.nextInt();
+                    }
 
-                        for ( cont2 = 0; cont2 < ancho; cont2++) {
-                            System.out.print("*  ");
+                    //Para elegir el carácter que queremos imprimir
+                    System.out.println("Introduzca el caracter con el que desea rellenar el cuadrado");
+                    caracter = teclado.next().charAt(0);
+
+                    for ( cont = 0; cont < altura; cont++){  //Cuenta las filas
+
+                        for ( cont2 = 0; cont2 < ancho; cont2++) {  //Dibuja el largo de las filas
+                            System.out.print(caracter+"  ");
                         }
 
                         System.out.println("");
@@ -135,6 +173,13 @@ public class Triangulo3 {
             System.out.println("\nDesea ejecutar de nuevo S/N\n");
             respuesta = teclado.next().charAt(0);
             respuesta = Character.toUpperCase(respuesta);
+
+            //Validar ejecutar
+            while ( respuesta != 'S' && respuesta != 'N' ){
+                System.out.println("Por favor, introduzca una de las opciones S/N");
+                respuesta = teclado.next().charAt(0);
+                respuesta = Character.toUpperCase(respuesta);
+            }
 
         }while ( respuesta != 'N'  );
     }
