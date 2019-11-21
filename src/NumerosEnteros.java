@@ -16,36 +16,43 @@
     PSEUDOCÓDIGO DETALLADO
     ProgramaPrincipal
     Inicio
+        Repetir
 
-        Inicializar numeroGrande= 0, NumeroPequeño=0, listaDivisores = 1, listaDivisores2 = 1
-        String acumula1, acumula2, comunes
+            Inicializar numeroGrande= 0, NumeroPequeño=0, listaDivisores = 1, listaDivisores2 = 1
+            String acumula1, acumula2, comunes
 
-        Pedir nunero1 y validar
-        Pedir numero2 y validar
+            Pedir nunero1 y validar
+            Pedir numero2 y validar
 
-        Si ( numero1 > numero2 )
-            numeroGrande = numero1
-            numeroPequeño = numero2
-        SiNo
-            numeroGrande = numero2
-            numeroPequeño = numero1
+            Si ( numero1 > numero2 )
+                numeroGrande = numero1
+                numeroPequeño = numero2
+            SiNo
+                numeroGrande = numero2
+                numeroPequeño = numero1
 
-        Para ( cont=0, cont <= numeroGrande, cont++ )
-            Si ( numeroGrande % cont == 0 )
-                listaDivisores = cont
-                acumula1 += " "+listaDivisores1
-            FinSi
-
-            Si ( cont <= numeroPequeño )
-                Si ( numeroPequeño % cont == 0 )
+            Para ( cont=0, cont <= numeroGrande, cont++ )
+                Si ( numeroGrande % cont == 0 )
                     listaDivisores = cont
-                    acumula2 += " "+listaDivisores2
+                    acumula1 += " "+listaDivisores1
                 FinSi
-            FinSi
 
-            Si ( listaDivisores == listaDivisores2 )
-                comunes += " "+listaDivisores
-            FinSi
+                Si ( cont <= numeroPequeño )
+                    Si ( numeroPequeño % cont == 0 )
+                        listaDivisores = cont
+                        acumula2 += " "+listaDivisores2
+                    FinSi
+                FinSi
+
+                Si ( listaDivisores == listaDivisores2 )
+                    comunes += " "+listaDivisores
+                FinSi
+
+            Mostrar resultados
+
+            Ejecutar de nuevo y validar
+
+        Mientras ( respuesta != 'N')
 
       Fin
 
