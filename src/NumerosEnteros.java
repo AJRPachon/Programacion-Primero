@@ -99,7 +99,7 @@ public class NumerosEnteros {
                 numeroGrande = numero2;
             }
 
-
+/*
             for (cont = 1; cont <= numeroGrande; cont++) {
 
                 if (numeroGrande % cont == 0) {
@@ -122,6 +122,9 @@ public class NumerosEnteros {
             System.out.println("Divisores primer número: " + acumula2);
             System.out.println("Divisores segundo número: " + acumula1);
             System.out.println("Divisores comunes: " + comunes);
+*/
+
+
 
             //Preguntar ejecutar de nuevo
             System.out.println("\nDesea ejecutar de nuevo S/N");

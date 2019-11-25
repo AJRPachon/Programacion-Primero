@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="152ae88c-3bd8-4b0f-835f-ac59ec3c3150" name="Default Changelist" comment="" />
+    <list default="true" id="152ae88c-3bd8-4b0f-835f-ac59ec3c3150" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumerosEnteros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NumerosEnteros.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Triangulo3">
+  <component name="RunManager" selected="Application.NumerosEnteros">
+    <configuration name="NumerosEnteros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NumerosEnteros" />
+      <module name="Programacion-Primero" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tarot2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Tarot2" />
       <module name="Programacion-Primero" />
@@ -81,6 +91,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NumerosEnteros" />
         <item itemvalue="Application.Triangulo3" />
         <item itemvalue="Application.Triangulo" />
         <item itemvalue="Application.Tarot2" />
@@ -105,6 +116,7 @@
       <workItem from="1574074676883" duration="2587000" />
       <workItem from="1574155138781" duration="6803000" />
       <workItem from="1574341469878" duration="1981000" />
+      <workItem from="1574411308443" duration="2151000" />
     </task>
     <servers />
   </component>
